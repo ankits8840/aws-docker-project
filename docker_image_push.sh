@@ -1,7 +1,8 @@
 #!  /bin/bash
 profile="default"
 region="ap-south-1"
-buildTag="shellscript-demo:latest"
+#buildTag="shellscript-demo:latest"
+buildTag="jenkin-pipeline-build-demo:latest"
 
 echo "$1"
 echo "$2"
