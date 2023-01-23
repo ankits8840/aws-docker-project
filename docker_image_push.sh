@@ -27,6 +27,6 @@ fi
 #docker push "073810531838.dkr.ecr.ap-south-1.amazonaws.com/${buildTag}"
 
 aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 073810531838.dkr.ecr.ap-south-1.amazonaws.com
-docker build -t jenkin-pipeline-build-demo .
-docker tag jenkin-pipeline-build-demo:latest 073810531838.dkr.ecr.ap-south-1.amazonaws.com/jenkin-pipeline-build-demo:latest
-docker push 073810531838.dkr.ecr.ap-south-1.amazonaws.com/jenkin-pipeline-build-demo:latest
+docker build -t "${buildTag}" .
+docker tag "${buildTag}" "073810531838.dkr.ecr.ap-south-1.amazonaws.com/${buildTag}"
+docker push "073810531838.dkr.ecr.ap-south-1.amazonaws.com/${buildTag}"
